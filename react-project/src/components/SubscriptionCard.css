@@ -1,31 +1,117 @@
 .card {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #eef2f7;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 2fr 1fr 1fr 120px;
+  padding: 18px 22px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:last-child {
+  border-bottom: none;
+}
+
+.card:hover {
+  background-color: #fbfdff;
+  transform: translateX(2px);
+}
+
+.service-cell {
+  align-items: center;
+  display: flex;
+  gap: 14px;
+  min-width: 0;
+}
+
+.service-avatar {
+  align-items: center;
+  background-color: #ecfeff;
+  border: 1px solid #a5f3fc;
+  border-radius: 8px;
+  color: #0e7490;
+  display: inline-flex;
+  flex: 0 0 42px;
+  font-weight: 900;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
 }
 
 .card h3 {
+  color: #111827;
+  font-size: 16px;
   margin: 0;
 }
 
 .card p {
-  color: gray;
+  color: #64748b;
+  margin: 4px 0 0;
+}
+
+.price-cell p {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.renewal-cell p {
+  margin: 0;
+}
+
+.status-cell {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.active,
+.pending {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 900;
+  justify-content: center;
+  min-width: 84px;
+  padding: 8px 12px;
 }
 
 .active {
-  background-color: #d4f5df;
-  color: green;
-  padding: 8px 12px;
-  border-radius: 20px;
+  background-color: #dcfce7;
+  color: #15803d;
 }
 
 .pending {
-  background-color: #ffe8b3;
-  color: orange;
-  padding: 8px 12px;
-  border-radius: 20px;
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    align-items: flex-start;
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .price-cell::before,
+  .renewal-cell::before {
+    color: #94a3b8;
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  .price-cell::before {
+    content: 'Price';
+  }
+
+  .renewal-cell::before {
+    content: 'Renewal';
+  }
 }

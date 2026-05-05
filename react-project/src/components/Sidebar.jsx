@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
 function Sidebar() {
@@ -7,11 +8,21 @@ function Sidebar() {
       <h2>SubCash</h2>
 
       <ul>
-        <li>Dashboard</li>
-        <li>Subscriptions</li>
-        <li>Payments</li>
-        <li>Calendar</li>
-        <li>Settings</li>
+        <li>
+          <NavLink to="/">Dashboard</NavLink>
+        </li>
+        <li>
+          <NavLink to="/subscriptions">Subscriptions</NavLink>
+        </li>
+        <li>
+          <span>Payments</span>
+        </li>
+        <li>
+          <span>Calendar</span>
+        </li>
+        <li>
+          <span>Settings</span>
+        </li>
       </ul>
     </div>
   );

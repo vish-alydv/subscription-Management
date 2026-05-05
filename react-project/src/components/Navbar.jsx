@@ -4,10 +4,13 @@ import './Navbar.css';
 function Navbar() {
   return (
     <div className="navbar">
-      <input type="text" placeholder="Search subscription..." />
+      <div className="search-box">
+        <span>Search</span>
+        <input type="text" placeholder="Search subscription..." />
+      </div>
 
       <div className="profile">
-        <span>👤</span>
+        <span>SK</span>
       </div>
     </div>
   );

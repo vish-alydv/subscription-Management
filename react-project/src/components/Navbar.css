@@ -1,23 +1,62 @@
 .navbar {
+  align-items: center;
   display: flex;
+  gap: 18px;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
-.navbar input {
-  width: 300px;
-  padding: 12px;
+.search-box {
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+  display: flex;
+  gap: 12px;
+  max-width: 420px;
+  padding: 0 14px;
+  width: 100%;
+}
+
+.search-box span {
+  color: #14b8a6;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.search-box input {
+  border: none;
+  flex: 1;
+  font: inherit;
+  min-height: 46px;
+  min-width: 0;
+  outline: none;
 }
 
 .profile {
-  width: 45px;
-  height: 45px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  background-color: #111827;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+  color: white;
+  display: flex;
+  flex: 0 0 46px;
+  font-size: 13px;
+  font-weight: 900;
+  height: 46px;
+  justify-content: center;
+  width: 46px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    align-items: stretch;
+  }
+
+  .search-box {
+    max-width: none;
+  }
 }
